@@ -25,7 +25,7 @@ class TranscriptViewer:
             'button_fg': 'white'
         }
         
-        self.translator = GoogleTranslator(source='auto', target='en')
+        self.translator = GoogleTranslator(source='en', target='tr')
         self.is_translated = False
         self.original_text = ""
         self.save_file = 'last_position.json'
