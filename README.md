@@ -42,8 +42,8 @@ Transcript Viewer is a Python-based application that allows you to navigate, rea
 ## How to Use
 
 1. Copy transcript content from [TV Show Transcripts](https://tvshowtranscripts.ourboard.org/). 
-    Supernatural Season 1 Episode 10 Example:  "https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570"
-    !!!(Not compatible with the text in this link: https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570&view=print)
+Supernatural Season 1 Episode 10 Example:  "https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570"
+!!!(Not compatible with the text in this link: https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570&view=print)
 
 2. Save it to a file named `transcript.txt` in the same directory as the script.
 3. Launch the app, and start navigating and translating the transcript!
