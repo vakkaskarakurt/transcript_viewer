@@ -40,25 +40,37 @@ class TranscriptViewer:
       self.bind_shortcuts()
 
   def show_url_dialog(self):
-      url_dialog = tk.Toplevel(self.root)
-      url_dialog.title("Enter URL")
-      url_dialog.geometry("600x200")
-      url_dialog.configure(bg=self.theme['bg'])
-      
-      url_frame = tk.Frame(url_dialog, bg=self.theme['bg'])
-      url_frame.pack(pady=20)
-      
-      url_entry = tk.Entry(url_frame, width=50, font=('Arial', 12))
-      url_entry.insert(0, "https://tvshowtranscripts.ourboard.org/viewtopic.php?f=1197&t=61695")
-      url_entry.pack(pady=10)
-      
-      start_button = tk.Button(url_dialog,
-                             text="Start Loading",
-                             command=lambda: self.handle_url(url_entry.get(), url_dialog),
-                             font=('Arial', 12),
-                             bg=self.theme['button_bg'],
-                             fg=self.theme['button_fg'])
-      start_button.pack(pady=10)
+        url_dialog = tk.Toplevel(self.root)
+        url_dialog.title("Enter URL")
+        url_dialog.geometry("800x300")  # Adjusted size for a larger input field
+        url_dialog.configure(bg=self.theme['bg'])
+
+        url_frame = tk.Frame(url_dialog, bg=self.theme['bg'])
+        url_frame.pack(pady=20)
+
+        url_label = tk.Label(
+            url_frame,
+            text="Enter the URL:",
+            font=('Arial', 14),
+            bg=self.theme['bg'],
+            fg=self.theme['fg']
+        )
+        url_label.pack(pady=5)
+
+        url_entry = tk.Entry(url_frame, width=70, font=('Arial', 14))  # Increased width
+        url_entry.insert(0, "https://tvshowtranscripts.ourboard.org")
+        url_entry.pack(pady=10)
+
+        start_button = tk.Button(
+            url_dialog,
+            text="Start Loading",
+            command=lambda: self.handle_url(url_entry.get(), url_dialog),
+            font=('Arial', 14),  # Increased font size for better visibility
+            bg=self.theme['button_bg'],
+            fg=self.theme['button_fg']
+        )
+        start_button.pack(pady=20)
+
 
   def handle_url(self, url, dialog):
       dialog.destroy()
