@@ -2,3 +2,5 @@
 *venv
 run.bat
 runner codes.txt
+*.pdf
+*.html
