@@ -1,59 +1,43 @@
-# transcript_viewer
-A minimal and intuitive transcript viewer to read, translate, and navigate TV show transcripts easily. Initially designed for "https://tvshowtranscripts.ourboard.org/", but extensible for other use cases.
+# Transcript Viewer Application
 
-# Transcript Viewer
+---
 
-Transcript Viewer is a Python-based application that allows you to navigate, read, and translate transcripts of TV shows easily. This app is currently optimized for transcripts copied from [TV Show Transcripts](https://tvshowtranscripts.ourboard.org/), but it can be adapted for other sources.
+## Overview
+The Transcript Viewer is a Python-based application designed for reading, translating, and managing transcripts from websites. This tool provides a user-friendly graphical interface built with `tkinter`, enabling seamless navigation, text translation, and other text-related functionalities.
+
+---
 
 ## Features
+- **Load Transcripts from URL**: Fetch and display transcript text directly from specified URLs.
+- **Text Navigation**: Navigate through transcript lines with "Previous" and "Next" buttons or keyboard shortcuts.
+- **Translation**: Translate text between English and Turkish using Google Translator.
+- **Text Management**:
+  - Copy text to the clipboard.
+  - View current progress with line counters.
+  - Save and resume transcript reading position.
+- **Customizable Interface**: Includes a dark theme with styled buttons and text areas for an enhanced user experience.
+- **Keyboard Shortcuts**:
+  - `Left Arrow`: Show the previous line.
+  - `Right Arrow`: Show the next line.
+  - `Ctrl+C`: Copy the current text.
+  - `C`: Toggle translation view.
 
-- **Easy Navigation**: Navigate through transcripts with `Next` and `Previous` buttons or jump to specific lines.
-- **Translation**: Translate selected transcript text into English using the Google Translator API.
-- **Copy Functionality**: Quickly copy text to your clipboard for external use.
-- **State Saving**: Automatically saves your position in the transcript, so you can continue from where you left off.
-- **Keyboard Shortcuts**: Use shortcuts for quick navigation and actions.
+---
 
-## Keyboard Shortcuts
+## Dependencies
+The application requires the following Python libraries:
 
-- `Right Arrow`: Go to the next transcript line.
-- `Left Arrow`: Go to the previous transcript line.
-- `C` : Toggle translation for the current transcript.
-- `"` : Toggle translation for the current transcript.
-- `Enter`: Jump to a specific line using the input field.
+- **Core Libraries**:
+  - `tkinter` (GUI components)
+  - `pyperclip` (Clipboard management)
+  - `asyncio` (Asynchronous tasks)
+  - `json` (Data storage)
+  - `os`, `threading`, `time` (System and threading utilities)
+- **Third-party Libraries**:
+  - `deep_translator` (Google Translator integration)
+  - `undetected_chromedriver` (Browser automation for undetected usage)
+  - `selenium` (Web scraping and interaction)
 
-## Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/vakkaskarakurt/transcript_viewer.git
-   cd transcript_viewer
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the application:
-   ```bash
-   python main.py
-   ```
-
-## How to Use
-
-1. Copy transcript content from [TV Show Transcripts](https://tvshowtranscripts.ourboard.org/). 
-Supernatural Season 1 Episode 10 Example:  "https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570"
-!!!(Not compatible with the text in this link: https://tvshowtranscripts.ourboard.org/viewtopic.php?f=105&t=6570&view=print)
-
-2. Save it to a file named `transcript.txt` in the same directory as the script.
-3. Launch the app, and start navigating and translating the transcript!
-
-## Planned Features
-
-- Support for directly loading transcripts from the website.
-- Enhanced translation options for multiple languages.
-- Improved UI/UX with themes and customization.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you would like to change.
+To simplify installation, a `requirements.txt` file is provided. Install all dependencies by running:
+```bash
+pip install -r requirements.txt
